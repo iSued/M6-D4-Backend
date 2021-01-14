@@ -28,18 +28,8 @@ const ArticleSchema = new Schema(
         lowercase: true,
       },
     },
-    author: {
-      name: {
-        type: String,
-        required: true,
-        lowercase: true,
-      },
-      img: {
-        type: String,
-        required: true,
-        lowercase: true,
-      },
-    },
+    author: { type: Schema.Types.ObjectId, ref: "Author" },
+
     cover: {
       type: String,
       required: true,
